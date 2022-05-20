@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Database Project | Durjoy Techworld</title>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    
+    
+     
+    
+    <link rel="stylesheet" href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/standard/modules/75a0fe7c939ce8cd48a5e968e62917d3.min.css">
+    
+
+    <link rel='stylesheet' id='roboto-subset.css-css'  href='https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/mdb5/fonts/roboto-subset.css?ver=3.9.0-update.5' typ
+  </head>
+  <body>
+
+
+<div class="container">
+
+<h2 class="mb-4">
+      Datatable
+      <span>    
+        <a href="/docs/standard/pro/" role="button">
+            <i class="far fa-xs fa-gem ms-1 text-danger"></i>
+        </a>
+      </span> 
+    </h2>
+
+<div class="alert alert-danger d-flex justify-content-between" role="alert" data-mdb-color="danger">
+          <p class="mb-0"><i class="fas fa-gem me-2">
+            </i>This component requires
+            <a href="/docs/standard/pro/" class="text-reset"><strong>MDB Pro Essential</strong>
+            </a> package.
+          </p>
+          <strong>
+            <a href="/docs/standard/pro/" class="text-reset d-none d-lg-block">Learn
+              more</a>
+          </strong>
+        </div>
+
+
+        {% for message in messages %}
+        <div class="alert alert-{{message.tags}} d-flex justify-content-between" role="alert" data-mdb-color="danger">
+          <p class="mb-0"><i class="fas fa-right me-2">
+            </i>{{message}}
+            <a href="/docs/standard/pro/" class="text-reset"><strong></strong>
+            </a>
+          </p>
+        </div>
+        {% endfor %}
+
+<p class="mt-3">It works perfectly with MDB datatables.</p>
+
+<p>
+      Learn more about Datatables in the
+      <a href="https://mdbootstrap.com/docs/standard/data/tables/" target="_blank">Datatables Docs</a>
+    </p>
+
+
+   <section class="pb-4">
+  <div class="bg-white border rounded-5">
+
+    
+    
+    <section class="w-100 p-4 pb-4">
+      <div class="form-outline mb-4">
+        <input type="search" class="form-control" id="datatable-search-input">
+        <label class="form-label" for="datatable-search-input" style="margin-left: 0px;">Search</label>
+      <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 48.8px;"></div><div class="form-notch-trailing"></div></div>
+    </div>
+
+
+<!--
+  Modal w3school start
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+
+<h2>Modal Login Form</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">POST DATA</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/" method="post">
+    {% csrf_token %}
+    <!-- <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div> -->
+
+
+    <div class="container">
+      <label for="uname"><b>Name</b></label>
+      <input type="text" placeholder="Enter Name" name="rame" required>
+
+      <label for="uname"><b>Position</b></label>
+      <input type="text" placeholder="Enter Position" name="position" required>
+      
+      <label for="uname"><b>Office</b></label>
+      <input type="text" placeholder="Enter Office" name="office" required>
+
+      <label for="uname"><b>Age</b></label>
+      <input type="text" placeholder="Enter Age" name="age" required>
+
+      <label for="uname"><b>Start date</b></label>
+      <input type="text" placeholder="Enter  Start date" name="start_date" required>
+
+      <label for="uname"><b>Salary</b></label>
+      <input type="text" placeholder="Enter  Salary" name="salary" required>
+
+        
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+<!--
+  Modal w3school End
+-->
+
+
+    
+      <div id="datatable" class="datatable">
+<div class="datatable-inner table-responsive ps" style="overflow: auto; position: relative;">
+  <table class="table datatable-table">
+    <thead class="datatable-header">
+      <tr>
+
+
+
+        
+<th style="cursor: pointer;" scope="col"><i data-mdb-sort="field_0" class="datatable-sort-icon fas fa-arrow-up"></i> Name</th>
+<th style="cursor: pointer;" scope="col"><i data-mdb-sort="field_1" class="datatable-sort-icon fas fa-arrow-up"></i> Position</th>
+<th style="cursor: pointer;" scope="col"><i data-mdb-sort="field_2" class="datatable-sort-icon fas fa-arrow-up"></i> Office</th>
+<th style="cursor: pointer;" scope="col"><i data-mdb-sort="field_3" class="datatable-sort-icon fas fa-arrow-up"></i> Age</th>
+<th style="cursor: pointer;" scope="col"><i data-mdb-sort="field_4" class="datatable-sort-icon fas fa-arrow-up"></i> Start date</th>
+<th style="cursor: pointer;" scope="col"><i data-mdb-sort="field_5" class="datatable-sort-icon fas fa-arrow-up"></i> Salary</th>
+      </tr>
+    </thead>
+    <tbody class="datatable-body">
+      {% for showdur in showdurjoy %}
+      <tr scope="row" data-mdb-index="0"><td style="" class="" data-mdb-field="field_0" false="">{{showdur.name}}</td><td style="" class="" data-mdb-field="field_1" false="">{{showdur.position}}</td><td style="" class="" data-mdb-field="field_2" false="">{{showdur.office}}</td><td style="" class="" data-mdb-field="field_3" false="">{{showdur.age}}</td><td style="" class="" data-mdb-field="field_4" false="">{{showdur.start_date}}</td><td style="" class="" data-mdb-field="field_5" false="">{{showdur.salary}}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+<div class="ps__rail-x" style="width: 816px; left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+  
+  
+<div class="datatable-pagination">
+  <div class="datatable-select-wrapper">
+    <p class="datatable-select-text">Rows per page:</p>
+    <div id="select-wrapper-284852" class="select-wrapper"><div class="form-outline"><input class="form-control select-input placeholder-active" type="text" role="listbox" aria-multiselectable="false" aria-disabled="false" aria-haspopup="true" aria-expanded="false" readonly="true"><span class="select-arrow"></span><div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 0px;"></div><div class="form-notch-trailing"></div></div><div class="form-label select-fake-value">10</div></div><select name="entries" class="datatable-select select select-initialized">
+      <option value="10" selected="">10</option>
+<option value="25">25</option>
+<option value="50">50</option>
+<option value="200">200</option>
+    </select></div>
+  </div>
+  <div class="datatable-pagination-nav">
+  1 - 10 of 10
+  </div>
+  <div class="datatable-pagination-buttons">
+    
+    <button data-mdb-ripple-color="dark" class="btn btn-link datatable-pagination-button datatable-pagination-left" disabled="true"><i class="fa fa-chevron-left"></i></button>
+    <button data-mdb-ripple-color="dark" class="btn btn-link datatable-pagination-button datatable-pagination-right" disabled="true"><i class="fa fa-chevron-right"></i></button>
+    
+  </div>
+</div>
+
+  </div>
+    </section>
+    
+    
+    
+    <div class="p-4 text-center border-top mobile-hidden">
+      <a class="btn btn-link px-3 collapsed" data-mdb-toggle="collapse" href="#example10" role="button" aria-expanded="false" aria-controls="example10" data-ripple-color="hsl(0, 0%, 67%)" style="">
+        <i class="fas fa-code me-md-2"></i>
+        <span class="d-none d-md-inline-block">
+          Show code
+        </span>
+      </a>
+      
+      
+        <a class="btn btn-link px-3" data-ripple-color="hsl(0, 0%, 67%)" style="">
+          <i class="fas fa-file-code me-md-2 pe-none"></i>
+          <span class="d-none d-md-inline-block export-to-snippet pe-none">
+            Edit in sandbox
+          </span>
+        </a>
+      
+    </div>
+    
+    
+  </div>
+</section>
+</div>
+  </body>
+</html>
